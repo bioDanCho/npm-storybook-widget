@@ -19,6 +19,7 @@
     },
     "homepage": "https://github.com/bioDanCho/npm-storybook-widget#readme",
     "devDependencies": {
+        "@supabase/supabase-js": "^2.32.0",
         "@types/react": "^18.2.20",
         "@types/react-dom": "^18.2.7",
         "babel-core": "^6.26.3",

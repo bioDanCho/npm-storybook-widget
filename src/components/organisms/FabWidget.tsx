@@ -4,7 +4,17 @@ import classNames from 'classnames';
 import { BsArrowsAngleExpand, BsArrowsAngleContract } from 'react-icons/bs';
 import FabList from '../molecules/FabList/FabList';
 
-const FabWidget = () => {
+type FabWidgetProps = {
+    componentsArr: {
+        id: number;
+        project_source: string;
+        component_name: string;
+        component_category: string;
+        url: string;
+    }[];
+};
+
+const FabWidget = ({ componentsArr }: FabWidgetProps) => {
     const [isOpen, setIsOpen] = useState(false);
 
     const handleBtnClick = () => {
@@ -19,7 +29,7 @@ const FabWidget = () => {
                 })}
             >
                 {/* content */}
-                <FabList isOpen={isOpen} />
+                <FabList isOpen={isOpen} componentsArr={componentsArr} />
 
                 {/* button */}
                 <div
