@@ -23,17 +23,18 @@ ___$insertStyle(".wrapper {\n  --width-closed: 70px;\n  --height-closed: 70px;\n
 
 ___$insertStyle(".fab-list {\n  overflow: hidden;\n  height: 0%;\n  background-color: #ffffff;\n  border-radius: 0px;\n  overflow-y: scroll;\n  transition: all 0.2s ease-in-out;\n  -ms-overflow-style: none; /* IE */\n  scrollbar-width: none; /* Firefox */\n}\n.fab-list--open {\n  height: 100%;\n  transition: all 0.2s ease-in-out;\n}\n.fab-list::-webkit-scrollbar {\n  display: none; /* Chrome */\n}");
 
-___$insertStyle(".fab-list-item {\n  cursor: pointer;\n  width: 100%;\n  padding: 1rem;\n  background-color: #ffffff;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  row-gap: 0.25rem;\n}\n.fab-list-item:hover {\n  background-color: #eeeeee;\n}\n.fab-list-item__name {\n  font-size: 16px;\n  color: #000000;\n  font-weight: bold;\n}\n.fab-list-item__type {\n  font-size: 14px;\n  color: #888888;\n}");
+___$insertStyle(".fab-list-item {\n  cursor: pointer;\n  width: 100%;\n  padding: 1rem;\n  background-color: #ffffff;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  row-gap: 0.25rem;\n}\n.fab-list-item:hover {\n  background-color: #eeeeee;\n}\n.fab-list-item__name {\n  font-size: 18px;\n  color: #000000;\n  font-weight: bold;\n}\n.fab-list-item__category {\n  font-size: 12px;\n  color: #888888;\n  text-transform: uppercase;\n}");
 
-var FabListItem = function () {
+var FabListItem = function (_a) {
+    var url = _a.url, componentName = _a.componentName, componentCategory = _a.componentCategory;
     var handleItemClick = function () {
-        var newWindow = window.open('https://www.google.ca', '_blank', 'noopener,noreferrer');
+        var newWindow = window.open(url, '_blank', 'noopener,noreferrer');
         if (newWindow)
             newWindow.opener = null;
     };
     return (React.createElement("div", { className: 'fab-list-item', onClick: handleItemClick },
-        React.createElement("div", { className: 'fab-list-item__name' }, "Button"),
-        React.createElement("div", { className: 'fab-list-item__type' }, "Inputs")));
+        React.createElement("div", { className: 'fab-list-item__name' }, componentName),
+        React.createElement("div", { className: 'fab-list-item__category' }, componentCategory)));
 };
 
 var FabList = function (_a) {
@@ -41,16 +42,14 @@ var FabList = function (_a) {
     return (React.createElement("div", { className: classNames('fab-list', {
             'fab-list--open': isOpen,
         }) },
-        React.createElement(FabListItem, null),
-        React.createElement(FabListItem, null),
-        React.createElement(FabListItem, null),
-        React.createElement(FabListItem, null),
-        React.createElement(FabListItem, null),
-        React.createElement(FabListItem, null),
-        React.createElement(FabListItem, null),
-        React.createElement(FabListItem, null),
-        React.createElement(FabListItem, null),
-        React.createElement(FabListItem, null)));
+        React.createElement(FabListItem, { componentName: 'Avatar', componentCategory: 'data display', url: 'https://bio-storybook.vercel.app/?path=/docs/data-display-avatar-lemonade--docs' }),
+        React.createElement(FabListItem, { componentName: 'Button', componentCategory: 'inputs', url: 'https://bio-storybook.vercel.app/?path=/docs/inputs-buttons-lemonade--docs' }),
+        React.createElement(FabListItem, { componentName: 'Checkbox', componentCategory: 'inputs', url: 'https://bio-storybook.vercel.app/?path=/docs/inputs-checkbox-lemonade--docs' }),
+        React.createElement(FabListItem, { componentName: 'Radio', componentCategory: 'inputs', url: 'https://bio-storybook.vercel.app/?path=/docs/inputs-radio-lemonade--docs' }),
+        React.createElement(FabListItem, { componentName: 'Radio Group', componentCategory: 'inputs', url: 'https://bio-storybook.vercel.app/?path=/docs/inputs-radiogroup-lemonade--docs' }),
+        React.createElement(FabListItem, { componentName: 'Select', componentCategory: 'inputs', url: 'https://bio-storybook.vercel.app/?path=/docs/inputs-select-lemonade--docs' }),
+        React.createElement(FabListItem, { componentName: 'Switch', componentCategory: 'inputs', url: 'https://bio-storybook.vercel.app/?path=/docs/inputs-switch-lemonade--docs' }),
+        React.createElement(FabListItem, { componentName: 'Text Field', componentCategory: 'inputs', url: 'https://bio-storybook.vercel.app/?path=/docs/inputs-text-fields-lemonade--docs' })));
 };
 
 var FabWidget = function () {

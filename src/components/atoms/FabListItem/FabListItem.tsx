@@ -1,20 +1,26 @@
 import React from 'react';
 import './styles.scss';
 
-const FabListItem = () => {
+type FabListItemProps = {
+    url: string;
+    componentName: string;
+    componentCategory: string;
+};
+
+const FabListItem = ({
+    url,
+    componentName,
+    componentCategory,
+}: FabListItemProps) => {
     const handleItemClick = () => {
-        const newWindow = window.open(
-            'https://www.google.ca',
-            '_blank',
-            'noopener,noreferrer'
-        );
+        const newWindow = window.open(url, '_blank', 'noopener,noreferrer');
         if (newWindow) newWindow.opener = null;
     };
 
     return (
         <div className='fab-list-item' onClick={handleItemClick}>
-            <div className='fab-list-item__name'>Button</div>
-            <div className='fab-list-item__type'>Inputs</div>
+            <div className='fab-list-item__name'>{componentName}</div>
+            <div className='fab-list-item__category'>{componentCategory}</div>
         </div>
     );
 };
