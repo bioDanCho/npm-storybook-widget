@@ -1,5 +1,5 @@
 {
-    "name": "npm-storybook-widget",
+    "name": "bio-storybook-widget",
     "version": "1.0.0",
     "description": "a storybook widget package",
     "main": "dist/index.js",
