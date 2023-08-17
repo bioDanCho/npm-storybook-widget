@@ -1,0 +1,89 @@
+.wrapper {
+    --width-closed: 70px;
+    --height-closed: 70px;
+    --border-radius-closed: 50%;
+    --width-open: 200px;
+    --height-open: 600px;
+    --border-radius-open: 10px;
+    --color-white: #ffffff;
+    --color-black: #000000;
+
+    .widget {
+        z-index: 9999999999;
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        width: var(--width-closed);
+        height: var(--height-closed);
+        border-radius: var(--border-radius-closed);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        opacity: 0.6;
+        background-color: transparent;
+        box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px,
+            rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+            rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+            opacity: 1;
+            transition: all 0.2s ease-in-out;
+        }
+
+        &--open {
+            opacity: 1;
+            width: var(--width-open);
+            height: var(--height-open);
+            border-radius: 0px 0px var(--border-radius-open)
+                var(--border-radius-open);
+            transition: all 0.2s ease-in-out;
+        }
+
+        .widget__btn {
+            cursor: pointer;
+            overflow: hidden;
+            background-color: #212021;
+            width: var(--width-closed);
+            height: var(--height-closed);
+            min-height: var(--height-closed);
+            border-radius: var(--border-radius-closed);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.2s ease-in-out;
+
+            &--open {
+                width: var(--width-open);
+                border-radius: 0px 0px var(--border-radius-open)
+                    var(--border-radius-open);
+                transition: all 0.2s ease-in-out;
+            }
+
+            &__text {
+                color: var(--color-white);
+            }
+
+            &__icon {
+                color: var(--color-white);
+                font-size: 30px;
+                transform: rotateZ(90deg);
+            }
+        }
+    }
+
+    .backdrop {
+        z-index: 999999999;
+        background-color: #000;
+        opacity: 0.3;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        min-width: 100vw;
+        max-width: 100vw;
+        height: 100vh;
+        min-height: 100vh;
+        max-height: 100vh;
+    }
+}

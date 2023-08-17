@@ -14,7 +14,7 @@ className: string (optional)
 
 ```
 
-To customise this component, pass in a class name to the `className` prop and style that class name in your custom CSS.
+To customize this component, pass in a class name to the `className` prop and style that class name in your custom CSS.
 
 ```
 

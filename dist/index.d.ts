@@ -1,7 +1,5 @@
 import React from 'react';
 import './styles.scss';
-export type ICounterProps = {
-    className?: string;
-};
-declare const App: React.FC<ICounterProps>;
+export type WidgetProps = {};
+declare const App: React.FC<WidgetProps>;
 export default App;
