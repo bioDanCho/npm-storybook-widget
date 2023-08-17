@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import './styles.scss';
 import FabWidget from './components/organisms/FabWidget';
 
 import { createClient } from '@supabase/supabase-js';
