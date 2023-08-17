@@ -1,0 +1,25 @@
+.fab-list-item {
+    cursor: pointer;
+    width: 100%;
+    padding: 1rem;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 0.25rem;
+
+    &:hover {
+        background-color: #eeeeee;
+    }
+
+    &__name {
+        font-size: 16px;
+        color: #000000;
+        font-weight: bold;
+    }
+
+    &__type {
+        font-size: 14px;
+        color: #888888;
+    }
+}
