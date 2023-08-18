@@ -1,11 +1,6 @@
 import React from 'react';
 import './styles.scss';
-
-type FabListItemProps = {
-    url: string;
-    componentName: string;
-    componentCategory: string;
-};
+import { FabListItemProps } from '../../../types';
 
 const FabListItem = ({
     url,

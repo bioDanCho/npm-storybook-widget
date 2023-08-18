@@ -1,18 +1,9 @@
 import React, { useState } from 'react';
 import './styles.scss';
+import { FabWidgetProps } from '../../types';
 import classNames from 'classnames';
 import { BsArrowsAngleExpand, BsArrowsAngleContract } from 'react-icons/bs';
 import FabList from '../molecules/FabList/FabList';
-
-type FabWidgetProps = {
-    componentsArr: {
-        id: number;
-        project_source: string;
-        component_name: string;
-        component_category: string;
-        url: string;
-    }[];
-};
 
 const FabWidget = ({ componentsArr }: FabWidgetProps) => {
     const [isOpen, setIsOpen] = useState(false);

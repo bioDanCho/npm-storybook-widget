@@ -1,9 +1,5 @@
 import React from 'react';
 import './styles.scss';
-type FabListItemProps = {
-    url: string;
-    componentName: string;
-    componentCategory: string;
-};
+import { FabListItemProps } from '../../../types';
 declare const FabListItem: ({ url, componentName, componentCategory, }: FabListItemProps) => React.JSX.Element;
 export default FabListItem;

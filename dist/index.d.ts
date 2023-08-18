@@ -1,6 +1,4 @@
 import React from 'react';
-export type AppProps = {
-    projectSource: string;
-};
+import { AppProps } from './types';
 declare const App: React.FC<AppProps>;
 export default App;

@@ -14,9 +14,9 @@ function ___$insertStyle(css) {
 Object.defineProperty(exports, '__esModule', { value: true });
 
 var React = require('react');
+var supabaseJs = require('@supabase/supabase-js');
 var classNames = require('classnames');
 var bs = require('react-icons/bs');
-var supabaseJs = require('@supabase/supabase-js');
 
 /******************************************************************************
 Copyright (c) Microsoft Corporation.
@@ -133,7 +133,7 @@ var App = function (_a) {
         getComponents();
     }, []);
     var getComponents = function () { return __awaiter(void 0, void 0, void 0, function () {
-        var data;
+        var data, sortedData;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0: return [4 /*yield*/, supabase
@@ -142,7 +142,14 @@ var App = function (_a) {
                         .eq('project_source', projectSource)];
                 case 1:
                     data = (_a.sent()).data;
-                    setComponentsData(data);
+                    sortedData = data.sort(function (a, b) {
+                        return a.component_name === b.component_name
+                            ? 0
+                            : a.component_name < b.component_name
+                                ? -1
+                                : 1;
+                    });
+                    setComponentsData(sortedData);
                     return [2 /*return*/];
             }
         });

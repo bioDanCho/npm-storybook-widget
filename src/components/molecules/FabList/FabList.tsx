@@ -1,18 +1,8 @@
 import React from 'react';
 import './styles.scss';
+import { FabListProps } from '../../../types';
 import classNames from 'classnames';
 import FabListItem from '../../atoms/FabListItem/FabListItem';
-
-type FabListProps = {
-    isOpen: boolean;
-    componentsArr: {
-        id: number;
-        project_source: string;
-        component_name: string;
-        component_category: string;
-        url: string;
-    }[];
-};
 
 const FabList = ({ isOpen, componentsArr }: FabListProps) => {
     return (
