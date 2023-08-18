@@ -4,33 +4,43 @@ A simple widget to take users to BIO's storybook components.
 
 ## How to use
 
-This section will be updated in the future.
+1. npm i bio-storybook-widget
+2. import
+3. use
+
+## Example
+
+```
+
+// your-component.js
+import BioStorybookWidget from 'bio-storybook-widget';
+
+<BioStorybookWidget projectSource={'lemonade'} />
+
+```
 
 ## Available props
 
 ```
 
-className: string (optional)
+projectSource: string (required)
 
 ```
 
-To customize this component, pass in a class name to the `className` prop and style that class name in your custom CSS.
+These are the available projects for **projectSource**:
 
-```
-
-// your-component.js
-import Dummy from 'dummy-counter'
-
-...
-<Dummy className="dummy" />
-...
-
-// your-component.css
-.dummy {
-  color: white;
-  background-color: purple;
-}
-
-```
+-   afterpay
+-   apple-card
+-   bia
+-   cinderbloc
+-   doordash
+-   eqbank
+-   fido
+-   google-fiber
+-   lemonade
+-   monzo
+-   netflix
+-   polestar
+-   twitch
 
 **This component was built for use in BIO Portfolio projects.**
