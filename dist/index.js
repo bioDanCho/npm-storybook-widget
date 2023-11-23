@@ -104,7 +104,7 @@ var FabList = function (_a) {
             "fab-list--empty": componentsArr.length <= 0,
         }) }, componentsArr.length > 0 ? (componentsArr.map(function (item) {
         var id = item.id, component_name = item.component_name, component_category = item.component_category, url = item.url;
-        return (React.createElement(FabListItem, { key: id, componentName: component_name, componentCategory: component_category, url: url }));
+        return (React.createElement(FabListItem, { key: id, componentName: component_name, componentCategory: component_category, url: "https://bio-storybook.vercel.app/?path=/docs/".concat(url) }));
     })) : (React.createElement("text", null, "No Components"))));
 };
 
