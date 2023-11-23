@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./FabWidget.module.scss";
+import "./styles.scss";
 import { FabWidgetProps } from "../../types";
 import classNames from "classnames";
 import { BsArrowsAngleExpand, BsArrowsAngleContract } from "react-icons/bs";
@@ -15,8 +15,8 @@ const FabWidget = ({ componentsArr }: FabWidgetProps) => {
   return (
     <div className='wrapper'>
       <div
-        className={classNames(styles["widget"], {
-          [styles["widget--open"]]: isOpen,
+        className={classNames("widget", {
+          "widget--open": isOpen,
         })}
       >
         {/* content */}
@@ -24,25 +24,22 @@ const FabWidget = ({ componentsArr }: FabWidgetProps) => {
 
         {/* button */}
         <div
-          className={classNames(styles["widget__btn"], {
-            [styles["widget__btn--open"]]: isOpen,
+          className={classNames("widget__btn", {
+            "widget__btn--open": isOpen,
           })}
           onClick={handleBtnClick}
         >
           {isOpen ? (
-            <BsArrowsAngleContract className={styles["widget__btn__icon"]} />
+            <BsArrowsAngleContract className={"widget__btn__icon"} />
           ) : (
-            <BsArrowsAngleExpand className={styles["widget__btn__icon"]} />
+            <BsArrowsAngleExpand className={"widget__btn__icon"} />
           )}
         </div>
       </div>
 
       {/* backdrop */}
       {isOpen && (
-        <div
-          className={styles["backdrop"]}
-          onClick={() => setIsOpen(false)}
-        ></div>
+        <div className={"backdrop"} onClick={() => setIsOpen(false)}></div>
       )}
     </div>
   );

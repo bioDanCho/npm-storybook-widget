@@ -15,7 +15,7 @@ export interface FabListProps extends FabWidgetProps {
     isOpen: boolean;
 }
 export interface FabListItemProps {
-    url: ComponentObj['url'];
-    componentName: ComponentObj['component_name'];
-    componentCategory: ComponentObj['component_category'];
+    url: ComponentObj["url"];
+    componentName: ComponentObj["component_name"];
+    componentCategory: ComponentObj["component_category"];
 }

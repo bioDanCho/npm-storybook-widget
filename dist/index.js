@@ -78,7 +78,7 @@ typeof SuppressedError === "function" ? SuppressedError : function (error, suppr
     return e.name = "SuppressedError", e.error = error, e.suppressed = suppressed, e;
 };
 
-___$insertStyle(".wrapper {\n  --width-closed: 70px;\n  --height-closed: 70px;\n  --border-radius-closed: 50%;\n  --width-open: 200px;\n  --height-open: 600px;\n  --border-radius-open: 10px;\n  --color-white: #ffffff;\n  --color-black: #000000;\n}\n.wrapper .widget {\n  z-index: 9999999999;\n  position: fixed;\n  bottom: 2rem;\n  right: 2rem;\n  width: var(--width-closed);\n  height: var(--height-closed);\n  border-radius: var(--border-radius-closed);\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-end;\n  opacity: 0.6;\n  background-color: transparent;\n  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;\n  transition: all 0.2s ease-in-out;\n}\n.wrapper .widget:hover {\n  opacity: 1;\n  transition: all 0.2s ease-in-out;\n}\n.wrapper .widget--open {\n  opacity: 1;\n  width: var(--width-open);\n  height: var(--height-open);\n  border-radius: 0px 0px var(--border-radius-open) var(--border-radius-open);\n  transition: all 0.2s ease-in-out;\n}\n.wrapper .widget .widget__btn {\n  cursor: pointer;\n  overflow: hidden;\n  background-color: #212021;\n  width: var(--width-closed);\n  height: var(--height-closed);\n  min-height: var(--height-closed);\n  border-radius: var(--border-radius-closed);\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  transition: all 0.2s ease-in-out;\n}\n.wrapper .widget .widget__btn--open {\n  width: var(--width-open);\n  border-radius: 0px 0px var(--border-radius-open) var(--border-radius-open);\n  transition: all 0.2s ease-in-out;\n}\n.wrapper .widget .widget__btn__text {\n  color: var(--color-white);\n}\n.wrapper .widget .widget__btn__icon {\n  color: var(--color-white);\n  font-size: 30px;\n  transform: rotateZ(90deg);\n}\n.wrapper .backdrop {\n  z-index: 999999999;\n  background-color: #000;\n  opacity: 0.3;\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100vw;\n  min-width: 100vw;\n  max-width: 100vw;\n  height: 100vh;\n  min-height: 100vh;\n  max-height: 100vh;\n}");
+___$insertStyle(".wrapper {\n  --width-closed: 70px;\n  --height-closed: 70px;\n  --border-radius-closed: 50%;\n  --width-open: 200px;\n  --height-open: 600px;\n  --border-radius-open: 10px;\n  --color-white: #ffffff;\n  --color-black: #000000;\n}\n.wrapper .widget {\n  border: 1px solid red;\n  z-index: 9999999999;\n  position: fixed;\n  bottom: 2rem;\n  right: 2rem;\n  width: var(--width-closed);\n  height: var(--height-closed);\n  border-radius: var(--border-radius-closed);\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-end;\n  opacity: 0.6;\n  background-color: transparent;\n  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;\n  transition: all 0.2s ease-in-out;\n}\n.wrapper .widget:hover {\n  opacity: 1;\n  transition: all 0.2s ease-in-out;\n}\n.wrapper .widget--open {\n  opacity: 1;\n  width: var(--width-open);\n  height: var(--height-open);\n  border-radius: 0px 0px var(--border-radius-open) var(--border-radius-open);\n  transition: all 0.2s ease-in-out;\n}\n.wrapper .widget .widget__btn {\n  cursor: pointer;\n  overflow: hidden;\n  background-color: #212021;\n  width: var(--width-closed);\n  height: var(--height-closed);\n  min-height: var(--height-closed);\n  border-radius: var(--border-radius-closed);\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  transition: all 0.2s ease-in-out;\n}\n.wrapper .widget .widget__btn--open {\n  width: var(--width-open);\n  border-radius: 0px 0px var(--border-radius-open) var(--border-radius-open);\n  transition: all 0.2s ease-in-out;\n}\n.wrapper .widget .widget__btn__text {\n  color: var(--color-white);\n}\n.wrapper .widget .widget__btn__icon {\n  color: var(--color-white);\n  font-size: 30px;\n  transform: rotateZ(90deg);\n}\n.wrapper .backdrop {\n  z-index: 999999999;\n  background-color: #000;\n  opacity: 0.3;\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100vw;\n  min-width: 100vw;\n  max-width: 100vw;\n  height: 100vh;\n  min-height: 100vh;\n  max-height: 100vh;\n}");
 
 ___$insertStyle(".fab-list {\n  overflow: hidden;\n  width: 100%;\n  height: 0%;\n  background-color: #ffffff;\n  border-radius: 0px;\n  overflow-y: scroll;\n  transition: all 0.2s ease-in-out;\n  -ms-overflow-style: none; /* IE */\n  scrollbar-width: none; /* Firefox */\n}\n.fab-list--open {\n  height: 100%;\n  transition: all 0.2s ease-in-out;\n}\n.fab-list--empty {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  color: #000000;\n}\n.fab-list::-webkit-scrollbar {\n  display: none; /* Chrome */\n}");
 
@@ -87,7 +87,7 @@ ___$insertStyle(".fab-list-item {\n  cursor: pointer;\n  width: 100%;\n  padding
 var FabListItem = function (_a) {
     var url = _a.url, componentName = _a.componentName, componentCategory = _a.componentCategory;
     var handleItemClick = function () {
-        var newWindow = window.open(url, '_blank', 'noopener,noreferrer');
+        var newWindow = window.open(url, "_blank", "noopener,noreferrer");
         if (newWindow)
             newWindow.opener = null;
     };
@@ -98,10 +98,10 @@ var FabListItem = function (_a) {
 
 var FabList = function (_a) {
     var isOpen = _a.isOpen, componentsArr = _a.componentsArr;
-    return (React.createElement("div", { className: classNames('fab-list', {
-            'fab-list--open': isOpen,
+    return (React.createElement("div", { className: classNames("fab-list", {
+            "fab-list--open": isOpen,
         }, {
-            'fab-list--empty': componentsArr.length <= 0,
+            "fab-list--empty": componentsArr.length <= 0,
         }) }, componentsArr.length > 0 ? (componentsArr.map(function (item) {
         var id = item.id, component_name = item.component_name, component_category = item.component_category, url = item.url;
         return (React.createElement(FabListItem, { key: id, componentName: component_name, componentCategory: component_category, url: url }));
@@ -115,17 +115,17 @@ var FabWidget = function (_a) {
         setIsOpen(!isOpen);
     };
     return (React.createElement("div", { className: 'wrapper' },
-        React.createElement("div", { className: classNames('widget', {
-                'widget--open': isOpen,
+        React.createElement("div", { className: classNames("widget", {
+                "widget--open": isOpen,
             }) },
             React.createElement(FabList, { isOpen: isOpen, componentsArr: componentsArr }),
-            React.createElement("div", { className: classNames('widget__btn', {
-                    'widget__btn--open': isOpen,
-                }), onClick: handleBtnClick }, isOpen ? (React.createElement(bs.BsArrowsAngleContract, { className: 'widget__btn__icon' })) : (React.createElement(bs.BsArrowsAngleExpand, { className: 'widget__btn__icon' })))),
-        isOpen && (React.createElement("div", { className: 'backdrop', onClick: function () { return setIsOpen(false); } }))));
+            React.createElement("div", { className: classNames("widget__btn", {
+                    "widget__btn--open": isOpen,
+                }), onClick: handleBtnClick }, isOpen ? (React.createElement(bs.BsArrowsAngleContract, { className: "widget__btn__icon" })) : (React.createElement(bs.BsArrowsAngleExpand, { className: "widget__btn__icon" })))),
+        isOpen && (React.createElement("div", { className: "backdrop", onClick: function () { return setIsOpen(false); } }))));
 };
 
-var supabase = supabaseJs.createClient('https://vxpfosdeqbislorhsocs.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZ4cGZvc2RlcWJpc2xvcmhzb2NzIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODMyOTgxOTEsImV4cCI6MTk5ODg3NDE5MX0.uqBU8-MwlGxi3twhPyTfxErkV6qFmDHCzfAsQ5E_GSs');
+var supabase = supabaseJs.createClient("https://vxpfosdeqbislorhsocs.supabase.co", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZ4cGZvc2RlcWJpc2xvcmhzb2NzIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODMyOTgxOTEsImV4cCI6MTk5ODg3NDE5MX0.uqBU8-MwlGxi3twhPyTfxErkV6qFmDHCzfAsQ5E_GSs");
 var App = function (_a) {
     var projectSource = _a.projectSource;
     var _b = React.useState([]), componentsData = _b[0], setComponentsData = _b[1];
@@ -137,9 +137,9 @@ var App = function (_a) {
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0: return [4 /*yield*/, supabase
-                        .from('components')
-                        .select('*')
-                        .eq('project_source', projectSource)];
+                        .from("components")
+                        .select("*")
+                        .eq("project_source", projectSource)];
                 case 1:
                     data = (_a.sent()).data;
                     sortedData = data.sort(function (a, b) {
