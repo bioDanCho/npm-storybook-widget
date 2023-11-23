@@ -2,14 +2,14 @@
   --width-closed: 70px;
   --height-closed: 70px;
   --border-radius-closed: 50%;
-  --width-open: 200px;
+  --width-open: 300px;
   --height-open: 600px;
   --border-radius-open: 10px;
   --color-white: #ffffff;
   --color-black: #000000;
+  --color-primary: #097c83;
 
   .widget {
-    border: 1px solid red;
     z-index: 9999999999;
     position: fixed;
     bottom: 2rem;
@@ -20,52 +20,53 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    opacity: 0.6;
     background-color: transparent;
     box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
       rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
       rgba(0, 0, 0, 0.09) 0px 32px 16px;
     transition: all 0.2s ease-in-out;
 
-    &:hover {
-      opacity: 1;
-      transition: all 0.2s ease-in-out;
-    }
-
     &--open {
       opacity: 1;
       width: var(--width-open);
       height: var(--height-open);
-      border-radius: 0px 0px var(--border-radius-open) var(--border-radius-open);
-      transition: all 0.2s ease-in-out;
     }
 
     .widget__btn {
       cursor: pointer;
       overflow: hidden;
-      background-color: #212021;
+      color: var(--color-primary);
+      background-color: transparent;
+      border: 2px solid var(--color-primary);
       width: var(--width-closed);
       height: var(--height-closed);
       min-height: var(--height-closed);
       border-radius: var(--border-radius-closed);
+      opacity: 0.6;
       display: flex;
       justify-content: center;
       align-items: center;
       transition: all 0.2s ease-in-out;
 
+      &:hover {
+        opacity: 1;
+        color: var(--color-white);
+        background-color: var(--color-primary);
+        transition: all 0.2s ease-in-out;
+      }
+
       &--open {
         width: var(--width-open);
         border-radius: 0px 0px var(--border-radius-open)
           var(--border-radius-open);
+        color: var(--color-white);
+        background-color: var(--color-primary);
+        opacity: 1;
         transition: all 0.2s ease-in-out;
       }
 
-      &__text {
-        color: var(--color-white);
-      }
-
       &__icon {
-        color: var(--color-white);
+        color: inherit;
         font-size: 30px;
         transform: rotateZ(90deg);
       }

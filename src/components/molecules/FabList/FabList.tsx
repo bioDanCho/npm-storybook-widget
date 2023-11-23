@@ -30,7 +30,7 @@ const FabList = ({ isOpen, componentsArr }: FabListProps) => {
           );
         })
       ) : (
-        <h2>No Components</h2>
+        <text>No Components</text>
       )}
     </div>
   );

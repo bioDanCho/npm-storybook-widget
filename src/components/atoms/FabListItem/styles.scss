@@ -9,13 +9,14 @@
   row-gap: 0.25rem;
 
   &:hover {
-    background-color: #eeeeee;
+    background-color: #097c8350;
   }
 
   &__name {
     font-size: 18px;
     color: #000000;
     font-weight: bold;
+    padding-bottom: 10px;
   }
 
   &__category {

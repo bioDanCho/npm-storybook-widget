@@ -15,7 +15,9 @@ const FabListItem = ({
   return (
     <div className='fab-list-item' onClick={handleItemClick}>
       <div className='fab-list-item__name'>{componentName}</div>
-      <div className='fab-list-item__category'>{componentCategory}</div>
+      <div className='fab-list-item__category'>
+        {componentCategory.toUpperCase()}
+      </div>
     </div>
   );
 };

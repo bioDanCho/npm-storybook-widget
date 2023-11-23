@@ -1,28 +1,28 @@
 .fab-list {
-    overflow: hidden;
-    width: 100%;
-    height: 0%;
-    background-color: #ffffff;
-    border-radius: 0px;
-    overflow-y: scroll;
+  overflow: hidden;
+  width: 100%;
+  height: 0%;
+  background-color: #ffffff;
+  border-radius: 0px;
+  overflow-y: scroll;
+  transition: all 0.2s ease-in-out;
+
+  &--open {
+    height: 100%;
     transition: all 0.2s ease-in-out;
+  }
 
-    &--open {
-        height: 100%;
-        transition: all 0.2s ease-in-out;
-    }
+  &--empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+  }
 
-    &--empty {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: #000000;
-    }
-
-    // hide scrollbar
-    -ms-overflow-style: none; /* IE */
-    scrollbar-width: none; /* Firefox */
-    &::-webkit-scrollbar {
-        display: none; /* Chrome */
-    }
+  // hide scrollbar
+  -ms-overflow-style: none; /* IE */
+  scrollbar-width: none; /* Firefox */
+  &::-webkit-scrollbar {
+    display: none; /* Chrome */
+  }
 }
