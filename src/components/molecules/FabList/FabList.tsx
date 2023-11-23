@@ -25,7 +25,7 @@ const FabList = ({ isOpen, componentsArr }: FabListProps) => {
               key={id}
               componentName={component_name}
               componentCategory={component_category}
-              url={url}
+              url={`https://bio-storybook.vercel.app/?path=/docs/${url}`}
             />
           );
         })
