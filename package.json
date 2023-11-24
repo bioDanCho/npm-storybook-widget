@@ -1,6 +1,6 @@
 {
   "name": "bio-storybook-widget",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "a storybook widget package",
   "main": "dist/index.js",
   "scripts": {
